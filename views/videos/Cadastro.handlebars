@@ -1,0 +1,32 @@
+<h1 class="text-center my-3">Cadastro de videos</h1>
+<form action="/Cadastrar" method="post">
+    <div class="row w-50 d-block m-auto g-3">
+        <div class="col-12">
+            <label class="form-label" for="autor">Autor:</label>
+            <input class="form-control" type="autor" name="autor" id="autor"
+                placeholder="Digite o nome do autor do video" />
+        </div>
+        <div class="col-12">
+            <label class="form-label" for="titulo">Titulo:</label>
+            <input class="form-control" type="titulo" name="titulo" id="titulo"
+                placeholder="Digite o título do video." />
+        </div>
+        <div class="col-12">
+            <label class="form-label" for="assunto">Assunto:</label>
+            <input class="form-control" type="assunto" name="assunto" id="assunto"
+                placeholder="Digite o assunto do video" />
+        </div>
+        <div class="col-12">
+            <label class="form-label" for="descricao">Descrição:</label>
+            <textarea class="form-control" name="descricao" id="descricao"
+                placeholder="Digite a descrição do video"></textarea>
+        </div>
+        <div class="col-12">
+            <label class="form-label" for="link">Link:</label>
+            <input class="form-control" name="link" id="link" placeholder="Link do video" />
+        </div>
+        <div>
+            <input class="btn btn-primary my-3" type="submit" value="Cadastrar video" />
+        </div>
+    </div>
+</form>

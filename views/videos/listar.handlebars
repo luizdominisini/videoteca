@@ -1,0 +1,41 @@
+<h1 class="text-center my-3">Lista de Todos os videos Preferidos</h1>
+<table class="table">
+    <div class="row">
+        <div class="col-12">
+            <thead>
+                <th>Código do video</th>
+                <th>Autor</th>
+                <th>Título</th>
+                <th>Assunto</th>
+                <th>Descrição</th>
+                <th>link para visualizar</th>
+            </thead>
+            <tbody>
+                {{#each video}}
+                <tr>
+                    <th>{{this.id_video}}</th>
+                    <th>{{this.autor}}</th>
+                    <th>{{this.titulo}}</th>
+                    <th>{{this.assunto}}</th>
+                    <th>{{this.descricao}}</th>
+                    <th>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe width="150" height="110" class="embed-responsive-item" src="{{this.link}}"
+                                allowfullscreen></iframe>
+                        </div>
+                    </th>
+                    <th><a href="/update/{{this.id_video}}">Editar<i class="bi bi-pencilsquare"></i></a></th>
+                    <th>
+                        <form class="borde-0 m-0" action="/remover" method="POST">
+                            <input type="hidden" name="id_video" value={{this.id_video}}>
+                            <input type="submit" value="Excluir" name="Excluir" />
+
+                        </form>
+                    </th>
+
+                </tr>
+                {{/each}}
+            </tbody>
+        </div>
+    </div>
+</table>
